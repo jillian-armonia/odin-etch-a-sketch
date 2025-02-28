@@ -8,7 +8,16 @@
 const grid = 16 * 16;
 const container = document.querySelector("#container");
 
-for (let i = 0; i <= grid; i++){
+for (let i = 0; i < grid; i++){
     let div = document.createElement("div");
     container.appendChild(div);
 }
+
+//Hover Effect
+    //ADD an eventListener to the container
+    //CHANGE the background color of a div when the mouse is hovering on it
+
+container.addEventListener("mouseover", (e) => {
+    if (e.target.id === "container") return;
+    e.target.style.backgroundColor = "gray";
+})
