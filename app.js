@@ -25,6 +25,13 @@ window.addEventListener("load", setGridSquares)
 container.addEventListener("mouseover", (e) => {
     if (e.target.id === "container") return;
     e.target.style.backgroundColor = "gray";
+
+    if (e.target.style.opacity == "") e.target.style.opacity = "0.1"
+    else {
+        let temp = Number(e.target.style.opacity)
+        temp += 0.1;
+        e.target.style.opacity = `${temp}`;
+    }
 })
 
 //Generate a new grid
