@@ -12,6 +12,7 @@ const container = document.querySelector("#container");
 function setGridSquares(){
     for (let i = 0; i < grid; i++){
         let div = document.createElement("div");
+        div.style.flexBasis = `calc(100% / ${Math.sqrt(grid)})`
         container.appendChild(div);
     }
 }
